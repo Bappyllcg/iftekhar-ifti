@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "src": "/images/gallery/photo1.svg",
+    "alt": "Iftekhar Ifti at awards ceremony",
+    "category": "events",
+    "caption": "Annual Excellence Awards 2024"
+  },
+  {
+    "id": 2,
+    "src": "/images/gallery/photo2.svg",
+    "alt": "Iftekhar Ifti during photoshoot",
+    "category": "photoshoot",
+    "caption": "Vogue Magazine Cover Shoot"
+  },
+  {
+    "id": 3,
+    "src": "/images/gallery/photo3.svg",
+    "alt": "Behind the scenes on set",
+    "category": "behind-the-scenes",
+    "caption": "Shadows of the Past - Behind the Scenes"
+  },
+  {
+    "id": 4,
+    "src": "/images/gallery/photo4.svg",
+    "alt": "Iftekhar Ifti casual portrait",
+    "category": "photoshoot",
+    "caption": "Summer Collection 2024"
+  },
+  {
+    "id": 5,
+    "src": "/images/gallery/photo5.svg",
+    "alt": "Press conference appearance",
+    "category": "events",
+    "caption": "Film Premiere - The Last Word"
+  },
+  {
+    "id": 6,
+    "src": "/images/gallery/photo6.svg",
+    "alt": "Drama still from Hearts Divided",
+    "category": "drama-stills",
+    "caption": "Hearts Divided - Scene from Episode 12"
+  },
+  {
+    "id": 7,
+    "src": "/images/gallery/photo7.svg",
+    "alt": "Studio recording session",
+    "category": "behind-the-scenes",
+    "caption": "Recording Dil Ki Awaaz"
+  },
+  {
+    "id": 8,
+    "src": "/images/gallery/photo8.svg",
+    "alt": "Magazine editorial shoot",
+    "category": "photoshoot",
+    "caption": "Filmfare Editorial 2023"
+  },
+  {
+    "id": 9,
+    "src": "/images/gallery/photo9.svg",
+    "alt": "Red carpet appearance",
+    "category": "events",
+    "caption": "Lux Style Awards 2023"
+  },
+  {
+    "id": 10,
+    "src": "/images/gallery/photo10.svg",
+    "alt": "On set for drama serial",
+    "category": "drama-stills",
+    "caption": "Beyond the Horizon - Final Episode"
+  },
+  {
+    "id": 11,
+    "src": "/images/gallery/photo11.svg",
+    "alt": "Casual outdoor portrait",
+    "category": "photoshoot",
+    "caption": "Weekend Shoot - Karachi"
+  },
+  {
+    "id": 12,
+    "src": "/images/gallery/photo12.svg",
+    "alt": "Interview session",
+    "category": "events",
+    "caption": "Morning Show Interview"
+  }
+]

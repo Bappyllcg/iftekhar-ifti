@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Dil Ki Awaaz",
+    "cover": "/images/songs/dil-ki-awaaz.svg",
+    "duration": "4:12",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 2,
+    "title": "Raatein",
+    "cover": "/images/songs/raatein.svg",
+    "duration": "3:48",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 3,
+    "title": "Tera Safar",
+    "cover": "/images/songs/tera-safar.svg",
+    "duration": "5:02",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 4,
+    "title": "Khamoshiyan",
+    "cover": "/images/songs/khamoshiyan.svg",
+    "duration": "4:35",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 5,
+    "title": "Naya Subah",
+    "cover": "/images/songs/naya-subah.svg",
+    "duration": "3:55",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 6,
+    "title": "Ishq Ka Safar",
+    "cover": "/images/songs/ishq-ka-safar.svg",
+    "duration": "4:20",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "name": "Iftekhar Ifti",
+  "tagline": "Actor | Performer | Artist",
+  "about": "Iftekhar Ifti is a versatile actor known for his compelling performances across television dramas, films, and digital content. With a career spanning several years, he has established himself as one of the most talented and dedicated performers in the industry. His ability to portray complex characters with depth and authenticity has earned him critical acclaim and a devoted fan following.",
+  "heroDesktop": "/images/hero.jpg",
+  "heroMobile": "/images/hero-mobile.jpg",
+  "photo": "/images/hero.jpg",
+  "stats": [
+    {
+      "label": "Dramas",
+      "value": "25+"
+    },
+    {
+      "label": "Songs",
+      "value": "15+"
+    },
+    {
+      "label": "Awards",
+      "value": "8"
+    },
+    {
+      "label": "Years Active",
+      "value": "10+"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2014",
+      "title": "Career Beginnings",
+      "description": "Started career with minor roles in television productions, showcasing natural talent and dedication to the craft."
+    },
+    {
+      "year": "2016",
+      "title": "First Leading Role",
+      "description": "Landed the first major leading role in a prime-time drama, gaining widespread recognition for the performance."
+    },
+    {
+      "year": "2018",
+      "title": "Critical Acclaim",
+      "description": "Received critical acclaim for a breakthrough performance, earning nomination for Best Actor at major award ceremonies."
+    },
+    {
+      "year": "2020",
+      "title": "Digital Debut",
+      "description": "Expanded into digital content and web series, reaching a new global audience and showcasing versatility."
+    },
+    {
+      "year": "2022",
+      "title": "Music Career",
+      "description": "Ventured into music, releasing debut single that resonated with fans and showcased another dimension of artistry."
+    },
+    {
+      "year": "2024",
+      "title": "International Projects",
+      "description": "Currently working on international collaborations and upcoming projects that push creative boundaries."
+    }
+  ]
+}

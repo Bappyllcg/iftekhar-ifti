@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Iftekhar Ifti: The Rising Star of Television",
+    "source": "Dawn Entertainment",
+    "date": "2024-06-15",
+    "thumbnail": "/images/media/dawn-article.svg",
+    "url": "#",
+    "snippet": "An in-depth look at how Iftekhar Ifti has risen to become one of the most sought-after actors in the television industry."
+  },
+  {
+    "id": 2,
+    "title": "Exclusive Interview: Life Behind the Camera",
+    "source": "The News International",
+    "date": "2024-05-20",
+    "thumbnail": "/images/media/news-interview.svg",
+    "url": "#",
+    "snippet": "In this exclusive sit-down, Ifti opens up about his journey, challenges, and what drives his passion for acting."
+  },
+  {
+    "id": 3,
+    "title": "Best Performances of 2024",
+    "source": "Filmfare Magazine",
+    "date": "2024-04-10",
+    "thumbnail": "/images/media/filmfare.svg",
+    "url": "#",
+    "snippet": "Iftekhar Ifti's performance in Shadows of the Past named among the top 10 performances of the year."
+  },
+  {
+    "id": 4,
+    "title": "From Drama to Music: Ifti's Versatile Journey",
+    "source": "Express Tribune",
+    "date": "2024-03-05",
+    "thumbnail": "/images/media/tribune.svg",
+    "url": "#",
+    "snippet": "How the actor seamlessly transitioned into music while maintaining his stronghold on television."
+  },
+  {
+    "id": 5,
+    "title": "Style Icon: Iftekhar Ifti's Fashion Statement",
+    "source": "Hello! Pakistan",
+    "date": "2024-02-18",
+    "thumbnail": "/images/media/hello.svg",
+    "url": "#",
+    "snippet": "A look at Ifti's evolving fashion sense and how he has become a style icon for the younger generation."
+  },
+  {
+    "id": 6,
+    "title": "Award Season: Nominations and Wins",
+    "source": "Geo News",
+    "date": "2024-01-25",
+    "thumbnail": "/images/media/geo-awards.svg",
+    "url": "#",
+    "snippet": "Complete coverage of award nominations and wins from the recent award season, including Ifti's multiple nominations."
+  }
+]

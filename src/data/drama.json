@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "title": "Shadows of the Past",
+    "role": "Detective Arif",
+    "year": 2024,
+    "poster": "/images/drama/shadows.svg",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Hearts Divided",
+    "role": "Kabir Hasan",
+    "year": 2023,
+    "poster": "/images/drama/hearts.svg",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "The Last Word",
+    "role": "Advocate Rafi",
+    "year": 2023,
+    "poster": "/images/drama/lastword.svg",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Beyond the Horizon",
+    "role": "Captain Zahid",
+    "year": 2022,
+    "poster": "/images/drama/horizon.svg",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 5,
+    "title": "Silent Echoes",
+    "role": "Dr. Hasan",
+    "year": 2022,
+    "poster": "/images/drama/silent.svg",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 6,
+    "title": "Rang Mahal",
+    "role": "Daniyal",
+    "year": 2021,
+    "poster": "/images/drama/rangmahal.svg",
+    "youtubeUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  }
+]
