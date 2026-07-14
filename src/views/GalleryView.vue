@@ -1,27 +1,17 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 import gallery from '@/data/gallery.json'
 
 const lightboxOpen = ref(false)
 const currentIndex = ref(0)
-const activeFilter = ref('all')
 let touchStartX = 0
 
-const categories = computed(() => {
-  const cats = [...new Set(gallery.map((g) => g.category))]
-  return ['all', ...cats]
-})
-
-const filteredGallery = computed(() => {
-  if (activeFilter.value === 'all') return gallery
-  return gallery.filter((g) => g.category === activeFilter.value)
-})
-
-const currentImage = computed(() => filteredGallery.value[currentIndex.value])
+const currentImage = ref(null)
 
 function openLightbox(index) {
   currentIndex.value = index
+  currentImage.value = gallery[index]
   lightboxOpen.value = true
   document.body.style.overflow = 'hidden'
 }
@@ -32,11 +22,13 @@ function closeLightbox() {
 }
 
 function next() {
-  currentIndex.value = (currentIndex.value + 1) % filteredGallery.value.length
+  currentIndex.value = (currentIndex.value + 1) % gallery.length
+  currentImage.value = gallery[currentIndex.value]
 }
 
 function prev() {
-  currentIndex.value = (currentIndex.value - 1 + filteredGallery.value.length) % filteredGallery.value.length
+  currentIndex.value = (currentIndex.value - 1 + gallery.length) % gallery.length
+  currentImage.value = gallery[currentIndex.value]
 }
 
 function handleKeydown(e) {
@@ -58,11 +50,6 @@ function onTouchEnd(e) {
   }
 }
 
-function setFilter(cat) {
-  activeFilter.value = cat
-  currentIndex.value = 0
-}
-
 onMounted(() => document.addEventListener('keydown', handleKeydown))
 onUnmounted(() => document.removeEventListener('keydown', handleKeydown))
 
@@ -81,27 +68,16 @@ useScrollReveal()
 
     <section class="section">
       <div class="container">
-        <div class="gallery-filters reveal">
-          <button
-            v-for="cat in categories"
-            :key="cat"
-            :class="['filter-btn', { active: activeFilter === cat }]"
-            @click="setFilter(cat)"
-          >
-            {{ cat === 'all' ? 'All' : cat.replace('-', ' ') }}
-          </button>
-        </div>
-
-        <div class="gallery-grid stagger-children">
+        <div class="masonry stagger-children">
           <div
-            v-for="(photo, index) in filteredGallery"
+            v-for="(photo, index) in gallery"
             :key="photo.id"
-            class="gallery-item reveal"
+            class="masonry-item reveal"
             @click="openLightbox(index)"
           >
             <img :src="photo.src" :alt="photo.alt" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-caption">{{ photo.caption }}</span>
+            <div class="masonry-overlay">
+              <span class="masonry-caption">{{ photo.caption }}</span>
             </div>
           </div>
         </div>
@@ -129,7 +105,7 @@ useScrollReveal()
           <img :src="currentImage?.src" :alt="currentImage?.alt" />
           <div class="lightbox-info">
             <p class="lightbox-caption">{{ currentImage?.caption }}</p>
-            <p class="lightbox-counter">{{ currentIndex + 1 }} / {{ filteredGallery.length }}</p>
+            <p class="lightbox-counter">{{ currentIndex + 1 }} / {{ gallery.length }}</p>
           </div>
         </div>
 
@@ -161,62 +137,27 @@ useScrollReveal()
   margin-top: 6px;
 }
 
-.gallery-filters {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 24px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding-bottom: 4px;
+/* Masonry grid */
+.masonry {
+  columns: 2;
+  column-gap: 8px;
 }
 
-.gallery-filters::-webkit-scrollbar {
-  display: none;
-}
-
-.filter-btn {
-  padding: 8px 16px;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: 100px;
-  color: var(--color-text-muted);
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  cursor: pointer;
-  text-transform: capitalize;
-  transition: all var(--transition-fast);
-  white-space: nowrap;
-  min-height: 36px;
-}
-
-.filter-btn.active {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: #0a0a0a;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-}
-
-.gallery-item {
+.masonry-item {
   position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;
   cursor: pointer;
-  aspect-ratio: 1;
+  break-inside: avoid;
+  margin-bottom: 8px;
 }
 
-.gallery-item img {
+.masonry-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: block;
 }
 
-.gallery-overlay {
+.masonry-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
@@ -228,11 +169,11 @@ useScrollReveal()
   transition: opacity var(--transition-normal);
 }
 
-.gallery-item:active .gallery-overlay {
+.masonry-item:active .masonry-overlay {
   opacity: 1;
 }
 
-.gallery-caption {
+.masonry-caption {
   font-size: 0.75rem;
   color: var(--color-text);
 }
@@ -325,16 +266,20 @@ useScrollReveal()
     font-size: 2.5rem;
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+  .masonry {
+    columns: 3;
+    column-gap: 12px;
   }
 
-  .gallery-overlay {
+  .masonry-item {
+    margin-bottom: 12px;
+  }
+
+  .masonry-overlay {
     opacity: 0;
   }
 
-  .gallery-item:hover .gallery-overlay {
+  .masonry-item:hover .masonry-overlay {
     opacity: 1;
   }
 
@@ -351,9 +296,13 @@ useScrollReveal()
     font-size: 3rem;
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+  .masonry {
+    columns: 4;
+    column-gap: 16px;
+  }
+
+  .masonry-item {
+    margin-bottom: 16px;
   }
 
   .lightbox-nav {
